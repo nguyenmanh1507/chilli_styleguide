@@ -1,0 +1,22 @@
+{
+  "name": "chilli_styleguide",
+  "version": "1.0.0",
+  "description": "Chilli Styleguide",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nguyenmanh1507/chilli_styleguide.git"
+  },
+  "keywords": [
+    "Styleguilde"
+  ],
+  "author": "ngmanh",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nguyenmanh1507/chilli_styleguide/issues"
+  },
+  "homepage": "https://github.com/nguyenmanh1507/chilli_styleguide#readme"
+}
