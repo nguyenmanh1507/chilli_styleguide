@@ -18,5 +18,10 @@
   "bugs": {
     "url": "https://github.com/nguyenmanh1507/chilli_styleguide/issues"
   },
-  "homepage": "https://github.com/nguyenmanh1507/chilli_styleguide#readme"
+  "homepage": "https://github.com/nguyenmanh1507/chilli_styleguide#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-load-plugins": "^1.2.0",
+    "gulp-postcss": "^6.1.0"
+  }
 }

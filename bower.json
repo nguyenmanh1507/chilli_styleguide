@@ -1,0 +1,21 @@
+{
+  "name": "chilli_styleguide",
+  "description": "Chilli Styleguide",
+  "main": "gulpfile.js",
+  "authors": [
+    "ngmanh"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "Styleguilde"
+  ],
+  "homepage": "https://github.com/nguyenmanh1507/chilli_styleguide",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
