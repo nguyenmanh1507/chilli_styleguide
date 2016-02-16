@@ -1,8 +1,6 @@
 # Tools use
 
-* Scaffolding project: Gulp-webapp (Yeoman)
-* Transforming styles with JS plugins: PostCSS
-* Use [Jade](http://jade-lang.com/) instead of plain HTML
+* [PostCSS](https://github.com/postcss/postcss): Transforming styles with JS plugins
 
 # Chilli Styleguide
 
