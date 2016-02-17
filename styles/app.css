@@ -1,0 +1,31 @@
+.site-head {
+	background: red;
+
+	.site-title {
+		color: tomato;
+	}
+}
+
+@component nav {
+	border: 1px solid black;
+
+	@descendent text-field {
+		opacity: 1;
+	}
+
+	@modifier advanced {
+		padding: 1rem;
+	}
+}
+
+@b block {
+	border-radius: 50%;
+
+	@e item {
+		padding: 1rem;
+	}
+
+	@m primary {
+		background: tomato;
+	}
+}
