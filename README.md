@@ -24,7 +24,7 @@ Use [Foundation Grid](http://foundation.zurb.com/) or [LostGrid](https://github.
 
 # Notes
 
-__Keep project simple as possible__
+:sunny: __Keep project simple as possible__ :sunny:
 
 ## Gulp plugins
 
@@ -45,4 +45,3 @@ __Keep project simple as possible__
 * [postcss-scss](https://github.com/jonathantneal/precss): tool that allows you to use Sass-like markup in your CSS files.
 * [cssnano](https://github.com/ben-eb/cssnano): A modular minifier, built on top of the PostCSS ecosystem.
 * [stylelint](https://github.com/stylelint/stylelint): A mighty, modern CSS linter that helps you enforce consistent conventions and avoid errors in your stylesheets.
-
