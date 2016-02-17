@@ -20,11 +20,19 @@
   },
   "homepage": "https://github.com/nguyenmanh1507/chilli_styleguide#readme",
   "devDependencies": {
+    "autoprefixer": "^6.3.3",
+    "browser-sync": "^2.11.1",
+    "cssnano": "^3.5.2",
     "gulp": "^3.9.1",
+    "gulp-jade": "^1.1.0",
     "gulp-load-plugins": "^1.2.0",
     "gulp-plumber": "^1.1.0",
     "gulp-postcss": "^6.1.0",
+    "gulp-sass": "^2.2.0",
     "gulp-sourcemaps": "^1.6.0",
+    "postcss-bem": "^0.4.1",
+    "postcss-nested": "^1.0.0",
+    "precss": "^1.4.0",
     "wiredep": "^3.0.0"
   }
 }
