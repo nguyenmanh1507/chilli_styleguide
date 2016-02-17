@@ -37,7 +37,7 @@ gulp.task('css', function() {
 				}),
 				precss,
 				autoprefixer,
-				cssnano
+				// cssnano,
 			]
 	;
 
@@ -46,6 +46,27 @@ gulp.task('css', function() {
 		// .pipe($.sass().on('error', $.sass.logError))
 		.pipe($.postcss(processors))
 		.pipe($.sourcemaps.write('.'))
+		.pipe(gulp.dest('./css'))
+	;
+});
+
+// Lint stylesheet
+gulp.task('lint:css', function() {
+	var stylelint = require('stylelint');
+
+	return gulp.src('./css/app.css')
+		.pipe($.postcss([
+			stylelint({
+				'rules': {
+			    'color-no-invalid-hex': true,
+			    'declaration-colon-space-after': 'always',
+			    'max-empty-lines': 2,
+			    'indentation': ['tab', {
+			      'except': ['value']
+			    }]
+			  }
+			})
+		]))
 		.pipe(gulp.dest('./css'))
 	;
 });
@@ -60,5 +81,6 @@ gulp.task('bower', function() {
 
 // Watcher
 gulp.task('watch', function() {
-	return gulp.watch('./views/**/*.jade', ['templates']);
+	gulp.watch('./views/**/*.jade', ['templates']);
+	gulp.watch('./styles/**/*.css', ['css']);
 });

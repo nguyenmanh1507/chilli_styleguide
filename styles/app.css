@@ -6,20 +6,13 @@
 	}
 }
 
-@component nav {
-	border: 1px solid black;
-
-	@descendent text-field {
-		opacity: 1;
-	}
-
-	@modifier advanced {
-		padding: 1rem;
-	}
+a {
+	color: red;
 }
 
 @b block {
 	border-radius: 50%;
+	display: flex;
 
 	@e item {
 		padding: 1rem;
