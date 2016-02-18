@@ -71,6 +71,17 @@ gulp.task('lint:css', function() {
 	;
 });
 
+// Lint scripts
+gulp.task('lint:js', function() {
+	return gulp.src('./scripts/**/*.js')
+		.pipe($.jshint())
+		.pipe($.jshint.reporter('jshint-stylish'))
+	;
+});
+
+// Reload browser after lint:js complete
+gulp.task('js-watch', ['lint:js'], browserSync.reload);
+
 // Auto insert link or script tag
 gulp.task('bower', function() {
 	return gulp.src('./index.html')
@@ -83,4 +94,15 @@ gulp.task('bower', function() {
 gulp.task('watch', function() {
 	gulp.watch('./views/**/*.jade', ['templates']);
 	gulp.watch('./styles/**/*.css', ['css']);
+});
+
+// Browser sync
+gulp.task('serve', function() {
+	browserSync.init({
+		server: './'
+	});
+
+	gulp.watch('./*.html').on('change', browserSync.reload);
+	gulp.watch('./styles/**/*.css', ['css']);
+	gulp.watch('./scripts/**/*.js', ['js-watch']);
 });
