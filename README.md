@@ -7,6 +7,49 @@
 
 ## Typography
 
+__Font Family__
+
+* Primary font (body text): Source Sans Pro
+* Secondary font (heading text): Alegreya
+* Special font: AguafinaScript Regular
+
+__Text variants__
+
+* Text mute
+* Menu text link
+* Dish name
+* Dish description
+* Meal title
+* Article heading
+* Article meta info
+
+__Lists__
+
+* No bullet List
+* Bullet list
+* Sidebar list with bullet
+* Sidebar list no bullet
+
+__Forms__
+
+Form components will have to type
+
+* Form in light bg
+* Form in dark bg
+
+Form components
+
+* Input field
+* Checkbox, Radio button
+* Select
+* Textarea
+
+__Buttons__
+
+* Button in light bg
+* Button in dark bg
+* Success, danger, warning
+
 ### Fonts
 
 ?
