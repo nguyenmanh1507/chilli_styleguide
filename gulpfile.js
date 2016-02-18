@@ -47,6 +47,7 @@ gulp.task('css', function() {
 		.pipe($.postcss(processors))
 		.pipe($.sourcemaps.write('.'))
 		.pipe(gulp.dest('./css'))
+		.pipe(browserSync.stream())
 	;
 });
 
@@ -97,11 +98,12 @@ gulp.task('watch', function() {
 });
 
 // Browser sync
-gulp.task('serve', function() {
+gulp.task('serve', ['css', 'templates', 'lint:js'], function() {
 	browserSync.init({
 		server: './'
 	});
 
+	gulp.watch('./views/**/*.jade', ['templates']);
 	gulp.watch('./*.html').on('change', browserSync.reload);
 	gulp.watch('./styles/**/*.css', ['css']);
 	gulp.watch('./scripts/**/*.js', ['js-watch']);
