@@ -45,3 +45,7 @@ Use [Foundation Grid](http://foundation.zurb.com/) or [LostGrid](https://github.
 * [postcss-scss](https://github.com/jonathantneal/precss): tool that allows you to use Sass-like markup in your CSS files.
 * [cssnano](https://github.com/ben-eb/cssnano): A modular minifier, built on top of the PostCSS ecosystem.
 * [stylelint](https://github.com/stylelint/stylelint): A mighty, modern CSS linter that helps you enforce consistent conventions and avoid errors in your stylesheets.
+
+## Misc
+
+* CSS class for styleguide need prefix (ex: sg-something) to avoid conflict with components's class.
