@@ -22,6 +22,7 @@ __Text variants__
 * Meal title
 * Article heading
 * Article meta info
+* Text link
 
 __Lists__
 
@@ -50,16 +51,9 @@ __Buttons__
 * Button in dark bg
 * Success, danger, warning
 
-### Fonts
+__Icons__
 
-?
-
-### Text
-
-* Heading
-* Paragraph
-* Anchor
-* List
+Use [FontAwesome](fortawesome.github.io/Font-Awesome/).
 
 ### Grid system
 
@@ -88,6 +82,14 @@ Use [Foundation Grid](http://foundation.zurb.com/) or [LostGrid](https://github.
 * [postcss-scss](https://github.com/jonathantneal/precss): tool that allows you to use Sass-like markup in your CSS files.
 * [cssnano](https://github.com/ben-eb/cssnano): A modular minifier, built on top of the PostCSS ecosystem.
 * [stylelint](https://github.com/stylelint/stylelint): A mighty, modern CSS linter that helps you enforce consistent conventions and avoid errors in your stylesheets.
+* [postcss-font-magician](https://github.com/jonathantneal/postcss-font-magician): Magically generate all the __@font-face__ rules.
+* [postcss-pxtorem](https://github.com/cuth/postcss-pxtorem): A plugin for PostCSS that generates rem units from pixel units.
+
+## CSS Guide
+
+* Class naming follow BEM method.
+* Structure CSS follow [SMACSS](https://smacss.com/) method.
+* Using relative unit (em, rem).
 
 ## Misc
 
