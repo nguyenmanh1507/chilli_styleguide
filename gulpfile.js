@@ -23,6 +23,8 @@ gulp.task('css', function() {
 	var bem = require('postcss-bem'),
 			precss = require('precss'),
 			cssnano = require('cssnano'),
+			fontMagician = require('postcss-font-magician'),
+			pxtorem = require('postcss-pxtorem'),
 			processors = [
 				bem({
 					style: 'bem',
@@ -36,6 +38,11 @@ gulp.task('css', function() {
 					}
 				}),
 				precss,
+				fontMagician,
+				pxtorem({
+					rootValue: 16,
+					mediaQuery: true
+				}),
 				autoprefixer,
 				// cssnano,
 			]
