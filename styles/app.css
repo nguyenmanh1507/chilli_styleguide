@@ -1,3 +1,27 @@
+@import "variables";
+
+body {
+	font-size: $base-font-size;
+}
+
+h1 {
+	font-size: $h1-fz;
+}
+
+h2 {
+	font-size: $h2-fz;
+}
+
+h3 {
+	font-size: $h3-fz;
+}
+
+h4,
+h5,
+h6 {
+	font-size: $h4-fz;
+}
+
 .site-head {
 	background: red;
 
