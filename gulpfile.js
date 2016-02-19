@@ -115,3 +115,6 @@ gulp.task('serve', ['css', 'templates', 'lint:js'], function() {
 	gulp.watch('./styles/**/*.css', ['css']);
 	gulp.watch('./scripts/**/*.js', ['js-watch']);
 });
+
+// Default task
+gulp.task('default', ['serve']);
