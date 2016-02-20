@@ -1,13 +1,13 @@
 /* Color Variables */
-$color-primary: #FE4365;
-$color-secondary: #83AF9B;
-$color-tertiary: #FC9D9A;
-$color-quaternary: #F9CDAD;
-$color-quinary: #C8C8A9;
-$color-text: #F3F3F3;
+$sg-color-primary: #FE4365;
+$sg-color-secondary: #83AF9B;
+$sg-color-tertiary: #FC9D9A;
+$sg-color-quaternary: #F9CDAD;
+$sg-color-quinary: #C8C8A9;
+$sg-color-text: #F3F3F3;
 
 .sg-header {
-	background: $color-primary;
+	background: $sg-color-primary;
 	color: $color-text;
 	padding: $meat;
 }
@@ -23,7 +23,7 @@ $color-text: #F3F3F3;
 			display: inline-block;
 
 			a {
-				color: $color-text;
+				color: $sg-color-text;
 				transition: color 0.35s ease-out;
 
 				&:hover {
@@ -31,6 +31,13 @@ $color-text: #F3F3F3;
 				}
 			}
 		}
+	}
+}
+
+@b sg-section {
+
+	@e title {
+		color: $sg-color-secondary;
 	}
 }
 

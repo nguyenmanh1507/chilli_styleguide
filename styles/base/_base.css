@@ -88,6 +88,13 @@ h6 {
   font-family: $font-secondary;
 }
 
+h3,
+h4,
+h5,
+h6 {
+  text-transform: uppercase;
+}
+
 mark {
   background: #ff0;
   color: #000;

@@ -1,31 +1,280 @@
 section.sg-section
 	h1.sg-section__title Basic markup and typographic styles
-	
+
+	//- HEADING
 	h2.sg-section__sub-title Headings
 
 	.sg-example
 		h3.sg-example__title
 			| Headings <em>_headings.css</em>
+		.sg-exmaple__descr
 		
-		h1 Welcome to Chilli Restaurant
-		h2 I'll order a complete man after a desirable pattern.
-		h3 I do deem it now a most meaning thing, that that old Greek.
-		h4 I do deem it now a most meaning thing, that that old Greek.
-		h5 I do deem it now a most meaning thing, that that old Greek.
-		h6 I do deem it now a most meaning thing, that that old Greek.
+		.sg-example__element
+			h1 Welcome to Chilli Restaurant
+			h2 I'll order a complete man after a desirable pattern.
+			h3 I do deem it now a most meaning thing, that that old Greek.
+			h4 I do deem it now a most meaning thing, that that old Greek.
+			h5 I do deem it now a most meaning thing, that that old Greek.
+			h6 I do deem it now a most meaning thing, that that old Greek.
 
-		.sg-html
+		.sg-example__code-ex
 			pre
-				code.language-css
-					| p {color: red;}
-
-
+				code.language-html
+					= "<h1>Welcome to Chilli Restaurant</h1>\n"
+					= "<h2>I'll order a complete man after a desirable pattern.</h2>\n"
+					= "<h3>I do deem it now a most meaning thing, that that old Greek.</h3>\n"
+					= "<h4>I do deem it now a most meaning thing, that that old Greek.</h4>\n"
+					= "<h4>I do deem it now a most meaning thing, that that old Greek.</h4>\n"
+					= "<h6>I do deem it now a most meaning thing, that that old Greek.</h6>"
+	//- END HEADING
+	
+	//- BODY COPY
 	h2.sg-section__sub-title Body copy
 
 	.sg-example
 		h3.sg-example__title
 			| p <em>_paragraphs.css</em>
-		.sg-exmaple__descr
+		.sg-example__descr
 			p
 				| Our default font-size is 16px at desktop.
+
+		.sg-example__element
+			p
+				| Um-m. So he must. I do deem it now a most meaning thing, that that old Greek, Prometheus, who made men, they say, should have been a blacksmith, and animated them with fire; for what's made in fire must properly belong to fire; and so hell's probable. How the soot flies! This must be the remainder the Greek made the Africans of. Carpenter, when he's through with that buckle, tell him to forge a pair of steel shoulder-blades; there's a pedlar aboard with a crushing pack.
+
+		.sg-example__code-ex
+			pre
+				code.language-html
+					= "<p>Um-m. So he must. I do deem it now a most meaning thing, that that old Greek, Prometheus, who made men, they say, should have been a blacksmith, and animated them with fire; for what's made in fire must properly belong to fire; and so hell's probable. How the soot flies! This must be the remainder the Greek made the Africans of. Carpenter, when he's through with that buckle, tell him to forge a pair of steel shoulder-blades; there's a pedlar aboard with a crushing pack.</p>"
+
+	.sg-example
+		h3.sg-example__title
+			| Intro <em>_intro.css</em>
+		.sg-example__descr
+			p
+				| Larger text size for the article introductory paragraph.
+
+		.sg-example__element
+			p.intro
+				| Right. It's a partnership; he supplies the muscle part. He makes a fierce red flame there! Aye, sir; he must have the white heat for this kind of fine work.
+
+		.sg-example__code-ex
+			pre
+				code.language-html
+					= "<p class=\"intro\">Right. It's a partnership; he supplies the muscle part. He makes a fierce red flame there! Aye, sir; he must have the white heat for this kind of fine work.</p>"
+
+	.sg-example
+		h3.sg-example__title
+			| Smallprint <em>_smallprint.css</em>
+		.sg-example__descr
+			p
+				| Smallprint
+
+		.sg-example__element
+			p.smallprint 15th July 1991
+
+		.sg-example__code-ex
+			pre
+				code.language-html
+					= "<p class\"smallprint\">15th July 1991</p>"
+	//- END BODY COPY
+	
+	//- LINKS
+	h2.sg-section__sub-title Links
+
+	.sg-example
+		h3.sg-example__title
+			| A <em>_link.css</em>
+		.sg-example__descr
+			p
+				| Basic primary links and their accompanying hover and focus states
+				ul
+					li
+						| <strong>:visited</strong> - Foo
+					li
+						| <strong>:hover</strong> - Foo
+					li
+						| <strong>:focus</strong> - Foo
+		
+		.sg-example__element
+			a(href="#") This is default link
+
+		.sg-example__element
+			span.sg-example__modifier-name :visited
+			a(href="#").pseudo-class-visited This is default link
+
+		.sg-example__element
+			span.sg-example__modifier-name :hover
+			a(href="#").pseudo-class-hover This is default link
+
+		.sg-example__element
+			span.sg-example__modifier-name :focus
+			a(href="#").pseudo-class-focus This is default link
+
+		.sg-example__code-ex
+			pre
+				code.language-html
+					= "<a href=\"#\">This is default link</a>"
+	//- END LINKS
+	
+	//- LISTS
+	h2.sg-section__sub-title Lists
+
+	.sg-example
+		h3.sg-example__title
+			| Ol <em>_lists.css</em>
+		.sg-example__descr
+			p
+				| The default style for numbered lists. The padding offsets the bullets by 25px.
+		
+		.sg-example__element
+			ol
+				li The Hatter was the first to break the silence.
+				li Alice felt dreadfully puzzled.
+				li Alice sighed wearily.
+				li I don't know what you mean.
+
+		.sg-example__code-ex
+			pre
+				code.language-html
+					= "<ol>\n"
+					= "	<li>The Hatter was the first to break the silence.</li>\n"
+					= "	<li>Alice felt dreadfully puzzled.</li>\n"
+					= "	<li>Alice sighed wearily.</li>\n"
+					= "	<li>I don't know what you mean.</li>\n"
+					= "</ol>"
+
+		.sg-example
+			h3.sg-example__title
+				| Ul <em>_lists.css</em>
+			.sg-example__descr
+				p
+					| The default style for unordered lists. The pading offsets the bullets by 25px.
+
+			.sg-example__element
+				ul
+					li The Hatter was the first to break the silence.
+					li Alice felt dreadfully puzzled.
+					li Alice sighed wearily.
+					li I don't know what you mean.
+
+			.sg-example__code-ex
+				pre
+					code.language-html
+						= "<ul>\n"
+						= "	<li>The Hatter was the first to break the silence.</li>\n"
+						= "	<li>Alice felt dreadfully puzzled.</li>\n"
+						= "	<li>Alice sighed wearily.</li>\n"
+						= "	<li>I don't know what you mean.</li>\n"
+						= "</ul>"
+
+		.sg-example
+			h3.sg-example__title
+				| List <em>_lists.css</em>
 				
+			.sg-example__descr
+				p
+					| The basic unordered list style with coloured bullet points.
+					
+			.sg-example__element
+				ul.list
+					li The Hatter was the first to break the silence.
+					li Alice felt dreadfully puzzled.
+					li Alice sighed wearily.
+					li I don't know what you mean.
+				
+			.sg-example__code-ex
+				pre
+					code.language-html
+						= "<ul class=\"list\">\n"
+						= "	<li>The Hatter was the first to break the silence.</li>\n"
+						= "	<li>Alice felt dreadfully puzzled.</li>\n"
+						= "	<li>Alice sighed wearily.</li>\n"
+						= "	<li>I don't know what you mean.</li>\n"
+						= "</ul>"
+		
+		.sg-example
+			h3.sg-example__title
+				| List-Benifits <em>_lists.css</em>
+			.sg-example__descr
+				p
+					| A list that has ticks and crosses for bullet points.
+			
+			.sg-example__element
+				ul.list--benifits
+					li The Hatter was the first to break the silence.
+					li Alice felt dreadfully puzzled.
+					li Alice sighed wearily.
+					li I don't know what you mean.
+					
+			.sg-example__code-ex
+				pre
+					code.language-html
+						= "<ul class=\"list--benifits\">\n"
+						= "	<li>The Hatter was the first to break the silence.</li>\n"
+						= "	<li>Alice felt dreadfully puzzled.</li>\n"
+						= "	<li>Alice sighed wearily.</li>\n"
+						= "	<li>I don't know what you mean.</li>\n"
+						= "</ul>"
+						
+			.sg-example
+				h3.sg-example__title
+					| Unstyled-list <em>_lists.css</em>
+				.sg-example__descr
+					p
+						| Basic unstyled list helper class to remove formatting from a list element.
+						
+				.sg-example__element
+					ul.unstyled-list
+						li The Hatter was the first to break the silence.
+						li Alice felt dreadfully puzzled.
+						li Alice sighed wearily.
+						li I don't know what you mean.
+				
+				.sg-example__code-ex
+					pre
+						code.language-html
+							= "<ul class=\"unstyled-list\">\n"
+							= "	<li>The Hatter was the first to break the silence.</li>\n"
+							= "	<li>Alice felt dreadfully puzzled.</li>\n"
+							= "	<li>Alice sighed wearily.</li>\n"
+							= "	<li>I don't know what you mean.</li>\n"
+							= "</ul>"
+	
+		.sg-example
+			h3.sg-example__title
+				| Hr <em>basic.css</em>
+			
+			.sg-example__descr
+				p
+					| Horizontal rule element (default style)
+					
+			.sg-example__element
+				hr
+			
+			.sg-example__code-ex
+				pre
+					code.language-html
+						= "<hr>"
+	//- END LISTS
+	
+	//- UTILITIES
+	h2.sg-section__sub-title Utilities
+	.sg-example
+		h3.sg-example__title
+			| Visually-Hidden <em>_visually_hidden.css</em>
+		
+		.sg-example__descr
+			p
+				| Use .visually-hidden to hide content from all but screen-reader users.
+				
+		.sg-example__element
+			p
+				| <span class="visually-hidden">Text to visually hidden</span> Text to display
+
+		.sg-example__code-ex
+			code
+				pre.language-html
+					= "<span class=\"visually-hidden\">Text to visually hidden</span> Text to display"
+
+	//- END UTILITIES

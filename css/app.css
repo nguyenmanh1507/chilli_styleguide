@@ -168,6 +168,7 @@
 }
 /* Fonts */
 /* Calculate font size */
+/* Colors */
 /* MISC */
 html {
     font-family: sans-serif;
@@ -220,6 +221,9 @@ dfn {
 /* Denfine font for heading */
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Alegreya',serif;
+}
+h3, h4, h5, h6 {
+    text-transform: uppercase;
 }
 mark {
     background: #ff0;
@@ -329,7 +333,7 @@ ul {
 /* Color Variables */
 .sg-header {
     background: #FE4365;
-    color: #F3F3F3;
+    color: $color-text;
     padding: calc(1.5 * 1rem);
 }
 .sg-nav ul {
@@ -346,7 +350,11 @@ ul {
     transition: color 0.35s ease-out;
 }
 .sg-nav ul li a:hover {
-    color: #C8C8A9;
+    color: $color-quinary;
+}
+.sg-section {}
+.sg-section__title {
+    color: #83AF9B;
 }
 
 /*# sourceMappingURL=app.css.map */
