@@ -4,15 +4,12 @@ html(lang="en")
 	include ./head.jade
 
 	body
-		
-		header.sg-site-head
-			.row
-				.medium-4.columns
-					h1.sg-site-title Chilli Styleguide
 
-				.medium-8.columns
-					p
-						| Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia corrupti, eum incidunt commodi itaque sint, repellendus molestiae. Dolore dignissimos, fugiat?
+		header.sg-header
+			.row
+				nav.sg-nav
+					ul
+						li: a(href="#") Typography
 						
 		.row
 			include ./components/typography.jade

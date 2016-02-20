@@ -1,0 +1,37 @@
+/* Color Variables */
+$color-primary: #FE4365;
+$color-secondary: #83AF9B;
+$color-tertiary: #FC9D9A;
+$color-quaternary: #F9CDAD;
+$color-quinary: #C8C8A9;
+$color-text: #F3F3F3;
+
+.sg-header {
+	background: $color-primary;
+	color: $color-text;
+	padding: $meat;
+}
+
+.sg-nav {
+
+	ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+
+		li {
+			display: inline-block;
+
+			a {
+				color: $color-text;
+				transition: color 0.35s ease-out;
+
+				&:hover {
+					color: $color-quinary;
+				}
+			}
+		}
+	}
+}
+
+

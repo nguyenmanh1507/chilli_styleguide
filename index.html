@@ -9,35 +9,38 @@
     <link rel="stylesheet" href="css/app.css"/>
   </head>
   <body>
-    <header class="sg-site-head">
+    <header class="sg-header">
       <div class="row">
-        <div class="medium-4 columns">
-          <h1 class="sg-site-title">Chilli Styleguide</h1>
-        </div>
-        <div class="medium-8 columns">
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia corrupti, eum incidunt commodi itaque sint, repellendus molestiae. Dolore dignissimos, fugiat?</p>
-        </div>
+        <nav class="sg-nav">
+          <ul>
+            <li><a href="#">Typography</a></li>
+          </ul>
+        </nav>
       </div>
     </header>
     <div class="row">
       <section class="sg-section">
-        <h2 class="sg-section__title">Typography</h2>
-        <p class="sg-section__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque pariatur, quaerat ad. Atque at ipsa eos delectus maxime, reiciendis quidem?</p>
-        <div class="row">
-          <div class="large-6 columns">
-            <div class="sg-section__content">
-              <p class="sg-section__description">Font Family</p>
-            </div>
-          </div>
-          <div class="large-6 columns">
-            <div class="sg-section__content">
-              <h1 class="h-special">Heading with special font</h1>
-              <p>	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi nesciunt maxime, eaque officia, adipisci quod vero nulla enim quia alias.</p>
-            </div>
+        <h1 class="sg-section__title">Basic markup and typographic styles</h1>
+        <h2 class="sg-section__sub-title">Headings</h2>
+        <div class="sg-example">
+          <h3 class="sg-example__title">Headings <em>_headings.css</em></h3>
+          <h1>Welcome to Chilli Restaurant</h1>
+          <h2>I'll order a complete man after a desirable pattern.</h2>
+          <h3>I do deem it now a most meaning thing, that that old Greek.</h3>
+          <h4>I do deem it now a most meaning thing, that that old Greek.</h4>
+          <h5>I do deem it now a most meaning thing, that that old Greek.</h5>
+          <h6>I do deem it now a most meaning thing, that that old Greek.</h6>
+        </div>
+        <h2 class="sg-section__sub-title">Body copy</h2>
+        <div class="sg-example">
+          <h3 class="sg-example__title">p <em>_paragraphs.css</em></h3>
+          <div class="sg-exmaple__descr">
+            <p>Our default font-size is 16px at desktop.</p>
           </div>
         </div>
       </section>
     </div>
+    <script src="bower_components/jquery/dist/jquery.js"></script>
     <!-- bower:js-->
     <!-- endbower-->
     <script src="js/app.js"></script>
