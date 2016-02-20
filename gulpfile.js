@@ -92,7 +92,7 @@ gulp.task('lint:js', function() {
 gulp.task('js-watch', ['lint:js'], browserSync.reload);
 
 // Auto insert link or script tag
-gulp.task('bower', function() {
+gulp.task('bower', ['templates'], function() {
 	return gulp.src('./index.html')
 		.pipe(wiredep({
 			exclude: ['jquery']
@@ -101,9 +101,12 @@ gulp.task('bower', function() {
 	;
 });
 
+// Force bower task run after templates task complete
+gulp.task('render', ['bower']);
+
 // Watcher
 gulp.task('watch', function() {
-	gulp.watch('./views/**/*.jade', ['templates']);
+	gulp.watch('./views/**/*.jade', ['render']);
 	gulp.watch('./styles/**/*.css', ['css']);
 });
 
@@ -113,7 +116,7 @@ gulp.task('serve', ['css', 'templates', 'bower', 'lint:js'], function() {
 		server: './'
 	});
 
-	gulp.watch('./views/**/*.jade', ['templates']);
+	gulp.watch('./views/**/*.jade', ['render']);
 	gulp.watch('./*.html').on('change', browserSync.reload);
 	gulp.watch('./styles/**/*.css', ['css']);
 	gulp.watch('./scripts/**/*.js', ['js-watch']);
