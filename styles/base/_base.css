@@ -54,6 +54,7 @@ template {
 
 a {
   background-color: transparent;
+  color: $color-primary;
   text-decoration: none;
 
   &:active {
@@ -88,7 +89,6 @@ h6 {
   font-family: $font-secondary;
 }
 
-h3,
 h4,
 h5,
 h6 {

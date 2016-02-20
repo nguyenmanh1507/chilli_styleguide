@@ -170,6 +170,8 @@
 /* Calculate font size */
 /* Colors */
 /* MISC */
+/* $meat: calc($base-lh * 1rem); */
+/* $meat = $base-lh * 1rem */
 html {
     font-family: sans-serif;
     -ms-text-size-adjust: 100%;
@@ -201,6 +203,7 @@ audio:not([controls]) {
 }
 a {
     background-color: transparent;
+    color: #ff514a;
     text-decoration: none;
 }
 a:active {
@@ -222,7 +225,7 @@ dfn {
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Alegreya',serif;
 }
-h3, h4, h5, h6 {
+h4, h5, h6 {
     text-transform: uppercase;
 }
 mark {
@@ -334,7 +337,7 @@ ul {
 .sg-header {
     background: #FE4365;
     color: $color-text;
-    padding: calc(1.5 * 1rem);
+    padding: 1.5rem;
 }
 .sg-nav ul {
     list-style: none;
@@ -359,16 +362,34 @@ ul {
 .sg-section__sub-title {
     color: #FC9D9A;
 }
-.sg-example {}
+.sg-example {
+    border: 1px solid #F3F3F3;
+    margin-bottom: calc(1.5rem * 4);
+}
+.sg-example__element {
+    padding: 1.5rem;
+}
 .sg-example__title {
     background: #FE4365;
     color: #F3F3F3;
-    padding: calc(1.5 * 1rem);
+    padding: 1.5rem;
     margin: 0;
 }
 .sg-example__title em {
     float: right;
     display: inline-block;
+}
+.sg-example__descr {
+    background: #F3F3F3;
+    padding: 1.5rem;
+}
+.sg-example__descr p {
+    //: #83AF9B;
+    margin: 0;
+}
+/* Remove margin [*="language-"] */
+code[class*="language-"], pre[class*="language-"] {
+    margin: 0;
 }
 
 /*# sourceMappingURL=app.css.map */

@@ -26,4 +26,6 @@ $color-secondary: $black;
 $color-tertiary: $white-smoke;
 
 /* MISC */
-$meat: calc($base-lh * 1rem);
+/* $meat: calc($base-lh * 1rem); */
+/* $meat = $base-lh * 1rem */
+$meat: 1.5rem;

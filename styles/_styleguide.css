@@ -46,6 +46,12 @@ $sg-color-text: #F3F3F3;
 }
 
 @b sg-example {
+	border: 1px solid $sg-color-text;
+	margin-bottom: calc($meat * 4);
+
+	@e element {
+		padding: $meat;
+	}
 
 	@e title {
 		background: $sg-color-primary;
@@ -58,4 +64,20 @@ $sg-color-text: #F3F3F3;
 			display: inline-block;
 		}
 	}
+
+	@e descr {
+		background: $sg-color-text;
+		padding: $meat;
+
+		p {
+			// color: $sg-color-secondary;
+			margin: 0;
+		}
+	}
+}
+
+/* Remove margin [*="language-"] */
+code[class*="language-"],
+pre[class*="language-"] {
+	margin: 0;
 }
