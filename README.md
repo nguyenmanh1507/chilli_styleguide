@@ -5,6 +5,8 @@
 
 # Chilli Styleguide
 
+Copy design style from [Money Advice Service (MAS) style guide](https://www.moneyadviceservice.org.uk/en/styleguide).
+
 ## Typography
 
 __Font Family__
