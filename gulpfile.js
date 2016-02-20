@@ -49,6 +49,7 @@ gulp.task('css', function() {
 	;
 
 	return gulp.src('./styles/app.css')
+		.pipe($.plumber())
 		.pipe($.sourcemaps.init())
 		// .pipe($.sass().on('error', $.sass.logError))
 		.pipe($.postcss(processors))
@@ -93,7 +94,9 @@ gulp.task('js-watch', ['lint:js'], browserSync.reload);
 // Auto insert link or script tag
 gulp.task('bower', function() {
 	return gulp.src('./index.html')
-		.pipe(wiredep())
+		.pipe(wiredep({
+			exclude: ['jquery']
+		}))
 		.pipe(gulp.dest('./'))
 	;
 });
@@ -105,7 +108,7 @@ gulp.task('watch', function() {
 });
 
 // Browser sync
-gulp.task('serve', ['css', 'templates', 'lint:js'], function() {
+gulp.task('serve', ['css', 'templates', 'bower', 'lint:js'], function() {
 	browserSync.init({
 		server: './'
 	});
@@ -114,6 +117,7 @@ gulp.task('serve', ['css', 'templates', 'lint:js'], function() {
 	gulp.watch('./*.html').on('change', browserSync.reload);
 	gulp.watch('./styles/**/*.css', ['css']);
 	gulp.watch('./scripts/**/*.js', ['js-watch']);
+	gulp.watch('./bower.json', ['bower']);
 });
 
 // Default task
