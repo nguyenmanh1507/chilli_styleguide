@@ -356,5 +356,19 @@ ul {
 .sg-section__title {
     color: #83AF9B;
 }
+.sg-section__sub-title {
+    color: #FC9D9A;
+}
+.sg-example {}
+.sg-example__title {
+    background: #FE4365;
+    color: #F3F3F3;
+    padding: calc(1.5 * 1rem);
+    margin: 0;
+}
+.sg-example__title em {
+    float: right;
+    display: inline-block;
+}
 
 /*# sourceMappingURL=app.css.map */

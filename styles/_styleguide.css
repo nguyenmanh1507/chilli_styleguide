@@ -39,6 +39,23 @@ $sg-color-text: #F3F3F3;
 	@e title {
 		color: $sg-color-secondary;
 	}
+
+	@e sub-title {
+		color: $sg-color-tertiary;
+	}
 }
 
+@b sg-example {
 
+	@e title {
+		background: $sg-color-primary;
+		color: $sg-color-text;
+		padding: $meat;
+		margin: 0;
+
+		em {
+			float: right;
+			display: inline-block;
+		}
+	}
+}
