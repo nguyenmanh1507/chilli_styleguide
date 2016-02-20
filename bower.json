@@ -18,5 +18,8 @@
     "test",
     "tests"
   ],
-  "dependencies": {}
+  "dependencies": {
+    "prism": "^1.4.1",
+    "jquery": "^2.2.0"
+  }
 }
