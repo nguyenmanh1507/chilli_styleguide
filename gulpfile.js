@@ -11,6 +11,7 @@ var gulp            = require('gulp'),
 // Compile Jade to HTML
 gulp.task('templates', function() {
 	return gulp.src('./views/index.jade')
+		.pipe($.plumber())
 		.pipe($.jade({
 			pretty: true
 		}))
@@ -26,6 +27,7 @@ gulp.task('css', function() {
 			fontMagician = require('postcss-font-magician'),
 			pxtorem = require('postcss-pxtorem'),
 			processors = [
+				precss,
 				bem({
 					style: 'bem',
 					separators: {
@@ -37,7 +39,6 @@ gulp.task('css', function() {
 						modifier: 'm'
 					}
 				}),
-				precss,
 				fontMagician,
 				pxtorem({
 					rootValue: 16,
@@ -117,10 +118,10 @@ gulp.task('serve', ['css', 'templates', 'bower', 'lint:js'], function() {
 	});
 
 	gulp.watch('./views/**/*.jade', ['render']);
-	gulp.watch('./*.html').on('change', browserSync.reload);
 	gulp.watch('./styles/**/*.css', ['css']);
 	gulp.watch('./scripts/**/*.js', ['js-watch']);
 	gulp.watch('./bower.json', ['bower']);
+	gulp.watch('./*.html').on('change', browserSync.reload);
 });
 
 // Default task
