@@ -21,12 +21,13 @@ gulp.task('templates', function() {
 
 // PostCSS task
 gulp.task('css', function() {
-	var bem = require('postcss-bem'),
-			precss = require('precss'),
-			cssnano = require('cssnano'),
-			fontMagician = require('postcss-font-magician'),
-			pxtorem = require('postcss-pxtorem'),
-			processors = [
+	var bem           = require('postcss-bem'),
+			precss        = require('precss'),
+			cssnano       = require('cssnano'),
+			fontMagician  = require('postcss-font-magician'),
+			pxtorem       = require('postcss-pxtorem'),
+			nested        = require('postcss-nested'),
+			processors    = [
 				precss,
 				bem({
 					style: 'bem',
@@ -39,6 +40,7 @@ gulp.task('css', function() {
 						modifier: 'm'
 					}
 				}),
+				nested,
 				fontMagician,
 				pxtorem({
 					rootValue: 16,
