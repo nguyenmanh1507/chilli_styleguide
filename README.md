@@ -75,7 +75,7 @@ Use [Foundation Grid](http://foundation.zurb.com/) or [LostGrid](https://github.
 * [gulp-jade](https://www.npmjs.com/package/gulp-jade): Compile Jade templates
 .
 * [browser-sync](https://github.com/Browsersync/browser-sync): Keep multiple browsers & devices in sync when building websites.
-* [gulp-sass](https://www.npmjs.com/package/gulp-sass): Sass plugin for Gulp.
+* [precss](https://github.com/jonathantneal/precss): Use Sass-like markup in your CSS.
 
 ## PostCSS plugins
 
