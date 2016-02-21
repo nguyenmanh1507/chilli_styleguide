@@ -19,6 +19,16 @@ gulp.task('templates', function() {
 	;
 });
 
+gulp.task('templates:partials', function() {
+	return gulp.src('./views/components/*.jade')
+		.pipe($.plumber())
+		.pipe($.jade({
+			pretty: true
+		}))
+		.pipe(gulp.dest('./partials'))
+	;
+});
+
 // PostCSS task
 gulp.task('css', function() {
 	var bem           = require('postcss-bem'),
@@ -54,7 +64,6 @@ gulp.task('css', function() {
 	return gulp.src('./styles/app.css')
 		.pipe($.plumber())
 		.pipe($.sourcemaps.init())
-		// .pipe($.sass().on('error', $.sass.logError))
 		.pipe($.postcss(processors))
 		.pipe($.sourcemaps.write('.'))
 		.pipe(gulp.dest('./css'))
@@ -107,23 +116,19 @@ gulp.task('bower', ['templates'], function() {
 // Force bower task run after templates task complete
 gulp.task('render', ['bower']);
 
-// Watcher
-gulp.task('watch', function() {
-	gulp.watch('./views/**/*.jade', ['render']);
-	gulp.watch('./styles/**/*.css', ['css']);
-});
-
 // Browser sync
-gulp.task('serve', ['css', 'templates', 'bower', 'lint:js'], function() {
+gulp.task('serve', ['css', 'templates', 'templates:partials', 'bower', 'lint:js'], function() {
 	browserSync.init({
 		server: './'
 	});
 
-	gulp.watch('./views/**/*.jade', ['render']);
+	gulp.watch('./views/index.jade', ['render']);
+	gulp.watch('./views/components/*.jade', ['templates:partials']);
 	gulp.watch('./styles/**/*.css', ['css']);
 	gulp.watch('./scripts/**/*.js', ['js-watch']);
 	gulp.watch('./bower.json', ['bower']);
 	gulp.watch('./*.html').on('change', browserSync.reload);
+	gulp.watch('./partials/*.html').on('change', browserSync.reload);
 });
 
 // Default task
