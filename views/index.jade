@@ -3,9 +3,7 @@ html(lang="en", ng-app="styleGuide")
 	//- HEAD
 	include ./head.jade
 
-	body
-
-		div(ng-view)
+	body(ng-controller="MainCtrl")
 
 		header.sg-header
 			.row
@@ -15,7 +13,8 @@ html(lang="en", ng-app="styleGuide")
 						li: a(href="#/typography") Typography
 						
 		.row
-			include ./components/typography.jade
+			div(ng-view)
+			//- include ./components/typography.jade
 
 		//- FOOTER
 		include ./footer.jade
