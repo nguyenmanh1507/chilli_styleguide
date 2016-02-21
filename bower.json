@@ -21,6 +21,8 @@
   "dependencies": {
     "prism": "^1.4.1",
     "jquery": "^2.2.0",
-    "angular": "^1.5.0"
-  }
+    "angular": "^1.5.0",
+    "angular-route": "^1.5.0"
+  },
+  "devDependencies": {}
 }
