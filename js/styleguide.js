@@ -4,12 +4,14 @@ angular.module('styleGuide', ['ngRoute'])
 	.config(function ($routeProvider, $locationProvider) {
 		$routeProvider
 			.when('/overview', {
-				templateUrl: 'overview.html'
+				templateUrl: 'partials/overview.html',
+				controller: 'MainCtrl'
 			})
 			.when('/typography', {
-				templateUrl: 'typography.html'
+				templateUrl: 'partials/typography.html',
+				controller: 'MainCtrl'
 			})
-			.otherwise({redirectTo: '/'})
+			.otherwise({redirectTo: '/overview'})
 		;
 
 		// if(window.history && window.history.pushState) {
@@ -18,5 +20,8 @@ angular.module('styleGuide', ['ngRoute'])
 		// 		requireBase: false
 		// 	});
 		// }
+	})
+	.controller('MainCtrl', function($scope) {
+		Prism.highlightAll();
 	})
 ;
