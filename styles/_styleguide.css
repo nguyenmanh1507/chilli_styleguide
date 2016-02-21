@@ -21,10 +21,12 @@ $sg-color-text: #F3F3F3;
 
 		li {
 			display: inline-block;
+			margin-right: 2em;
 
 			a {
 				color: $sg-color-text;
 				transition: color 0.35s ease-out;
+				font-weight: 700;
 
 				&:hover {
 					color: $color-quinary;
