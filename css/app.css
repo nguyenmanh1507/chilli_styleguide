@@ -336,8 +336,8 @@ ul {
 /* Color Variables */
 .sg-header {
     background: #FE4365;
-    color: $color-text;
-    padding: 1.5rem;
+    color: #F3F3F3;
+    padding: 1.5rem 0;
 }
 .sg-nav ul {
     list-style: none;

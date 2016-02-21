@@ -8,8 +8,8 @@ $sg-color-text: #F3F3F3;
 
 .sg-header {
 	background: $sg-color-primary;
-	color: $color-text;
-	padding: $meat;
+	color: $sg-color-text;
+	padding: $meat 0;
 }
 
 .sg-nav {
