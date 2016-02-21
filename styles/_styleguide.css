@@ -48,7 +48,7 @@ $sg-color-text: #F3F3F3;
 }
 
 @b sg-example {
-	border: 1px solid $sg-color-text;
+	border: 1px solid color($sg-color-text blackness(40%));
 	margin-bottom: calc($meat * 4);
 
 	@e element {
