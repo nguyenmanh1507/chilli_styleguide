@@ -1,15 +1,18 @@
 <!DOCTYPE html>
-html(lang="en" ng-app="styleGuide")
+html(lang="en", ng-app="styleGuide")
 	//- HEAD
 	include ./head.jade
 
 	body
 
+		div(ng-view)
+
 		header.sg-header
 			.row
 				nav.sg-nav
 					ul
-						li: a(href="#") Typography
+						li: a(href="/overview") Overview
+						li: a(href="/typography") Typography
 						
 		.row
 			include ./components/typography.jade
