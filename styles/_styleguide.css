@@ -27,6 +27,11 @@ $sg-color-text: #F3F3F3;
 				color: $sg-color-text;
 				transition: color 0.35s ease-out;
 				font-weight: 700;
+				padding-bottom: 5px;
+
+				&.active {
+					border-bottom: 2px solid $sg-color-text;
+				}
 
 				&:hover {
 					color: $color-quinary;
