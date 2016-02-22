@@ -7,8 +7,28 @@ angular.module('styleGuide', ['ngRoute'])
 				templateUrl: 'partials/overview.html',
 				controller: 'MainCtrl'
 			})
+			.when('/css', {
+				templateUrl: 'partials/css.html',
+				controller: 'MainCtrl'
+			})
 			.when('/typography', {
 				templateUrl: 'partials/typography.html',
+				controller: 'MainCtrl'
+			})
+			.when('/html', {
+				templateUrl: 'partials/html.html',
+				controller: 'MainCtrl'
+			})
+			.when('/forms', {
+				templateUrl: 'partials/forms.html',
+				controller: 'MainCtrl'
+			})
+			.when('/components', {
+				templateUrl: 'partials/components.html',
+				controller: 'MainCtrl'
+			})
+			.when('/layouts', {
+				templateUrl: 'partials/layouts.html',
 				controller: 'MainCtrl'
 			})
 			.otherwise({redirectTo: '/overview'})
