@@ -8,9 +8,11 @@ section.sg-section
 		h3.sg-example__title
 			| Headings <em>_headings.css</em>
 		.sg-example__descr
+			p
+				| Using "Alegreya" Google font.
 		
 		.sg-example__element
-			h1 Welcome to Chilli Restaurant
+			h1 Welcome to Chilli Restaurant.
 			h2 I'll order a complete man after a desirable pattern.
 			h3 I do deem it now a most meaning thing, that that old Greek.
 			h4 I do deem it now a most meaning thing, that that old Greek.
@@ -26,6 +28,21 @@ section.sg-section
 					= "<h4>I do deem it now a most meaning thing, that that old Greek.</h4>\n"
 					= "<h4>I do deem it now a most meaning thing, that that old Greek.</h4>\n"
 					= "<h6>I do deem it now a most meaning thing, that that old Greek.</h6>"
+	
+	.sg-example
+		h3.sg-example__title
+			| Heading special <em>_heading.css</em>
+		.sg-example__descr
+			p
+				| Using "AguafinaScript Regular" Google font.
+				
+		.sg-example__element
+			h1.h-special Welcome to Chilli Restaurant.
+			
+		.sg-example__code-ex
+			pre
+				code.language-html
+					= "<h1 class=\"h-special\">Welcome to Chilli Restaurant.</h1>"
 	//- END HEADING
 	
 	//- BODY COPY
@@ -36,7 +53,7 @@ section.sg-section
 			| p <em>_paragraphs.css</em>
 		.sg-example__descr
 			p
-				| Our default font-size is 16px at desktop.
+				| Our default font-size is 1rem (16px) at desktop. Using "Source Sans Pro" Google font.
 
 		.sg-example__element
 			p
