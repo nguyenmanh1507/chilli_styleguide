@@ -1,0 +1,41 @@
+/* Denfine font for heading */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $font-secondary;
+}
+
+h4,
+h5,
+h6 {
+  text-transform: uppercase;
+  font-weight: 300;
+}
+
+/* Set font-size for each heading */
+h1 {
+  font-size: $h1-fz;
+}
+
+h2 {
+  font-size: $h2-fz;
+}
+
+h3 {
+  font-size: $h3-fz;
+}
+
+h4 {
+  font-size: $h4-fz;
+}
+
+h5 {
+  font-size: $h5-fz;
+}
+
+h6 {
+  font-size: $h6-fz;
+}

@@ -1,0 +1,23 @@
+a {
+  background-color: transparent;
+  color: $color-primary;
+  text-decoration: none;
+  transition: all 0.35s ease-in;
+
+  &:active {
+    outline: 0;
+  }
+
+  &.pseudo-class-focus,
+  &.pseudo-class-visited,
+  &.pseudo-class-hover,
+  &:focus,
+  &:visited,
+  &:hover {
+    color: color($color-primary blackness(40%));
+  }
+
+  &:hover {
+    outline: 0;
+  }
+}

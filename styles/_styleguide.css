@@ -58,6 +58,17 @@ $sg-color-text: #F3F3F3;
 
 	@e element {
 		padding: $meat;
+		border-top: 1px solid color($sg-color-text blackness(40%));
+		position: relative;
+	}
+
+	@e modifier-name {
+		background: $sg-color-text;
+		display: inline-block;
+		padding: calc($meat / 4) calc($meat / 2);
+		position: absolute;
+		right: 0;
+		top: 0;
 	}
 
 	@e title {
@@ -65,10 +76,15 @@ $sg-color-text: #F3F3F3;
 		color: $sg-color-text;
 		padding: $meat;
 		margin: 0;
+		display: flex;
+		align-items: center;
+
+		span {
+			flex-grow: 1;
+		}
 
 		em {
-			float: right;
-			display: inline-block;
+			font-size: $h4-fz;
 		}
 	}
 
