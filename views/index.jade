@@ -9,13 +9,13 @@ html(lang="en", ng-app="styleGuide")
 			.row
 				nav.sg-nav
 					ul
-						li: a(href="#/overview") Overview
-						li: a(href="#/html") HTML
-						li: a(href="#/css") CSS
-						li: a(href="#/typography") Typography
-						li: a(href="#/forms") Forms
-						li: a(href="#/components") Components
-						li: a(href="#/layouts") Layouts
+						li: a(href="#/overview" ng-class="{active: $route.current.activeTab == 'overview'}") Overview
+						li: a(href="#/html" ng-class="{active: $route.current.activeTab == 'html'}") HTML
+						li: a(href="#/css" ng-class="{active: $route.current.activeTab == 'css'}") CSS
+						li: a(href="#/typography" ng-class="{active: $route.current.activeTab == 'typography'}") Typography
+						li: a(href="#/forms" ng-class="{active: $route.current.activeTab == 'forms'}") Forms
+						li: a(href="#/components" ng-class="{active: $route.current.activeTab == 'components'}") Components
+						li: a(href="#/layouts" ng-class="{active: $route.current.activeTab == 'layouts'}") Layouts
 						
 		.row
 			div(ng-view)
