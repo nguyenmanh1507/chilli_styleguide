@@ -1,0 +1,15 @@
+.list {
+
+  li::before {
+    content: '\25CF' ;
+    color: $color-primary;
+    margin-right: calc($meat / 4);
+    vertical-align: top;
+  }
+}
+
+.unstyled-list {
+  list-style: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
