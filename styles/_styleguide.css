@@ -45,6 +45,11 @@ $sg-color-text: #F3F3F3;
 	@e sub-title {
 		color: $sg-color-tertiary;
 	}
+
+	@e intro {
+		font-weight: 700;
+		font-size: calc($base-fz * 1.3);
+	}
 }
 
 @b sg-example {
@@ -82,4 +87,5 @@ $sg-color-text: #F3F3F3;
 code[class*="language-"],
 pre[class*="language-"] {
 	margin: 0;
+	word-wrap: break-word;
 }
