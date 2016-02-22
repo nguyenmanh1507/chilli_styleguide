@@ -5,31 +5,38 @@ angular.module('styleGuide', ['ngRoute'])
 		$routeProvider
 			.when('/overview', {
 				templateUrl: 'partials/overview.html',
-				controller: 'MainCtrl'
+				controller: 'MainCtrl',
+				activeTab: 'overview'
 			})
 			.when('/css', {
 				templateUrl: 'partials/css.html',
-				controller: 'MainCtrl'
+				controller: 'MainCtrl',
+				activeTab: 'css'
 			})
 			.when('/typography', {
 				templateUrl: 'partials/typography.html',
-				controller: 'MainCtrl'
+				controller: 'MainCtrl',
+				activeTab: 'typography'
 			})
 			.when('/html', {
 				templateUrl: 'partials/html.html',
-				controller: 'MainCtrl'
+				controller: 'MainCtrl',
+				activeTab: 'html'
 			})
 			.when('/forms', {
 				templateUrl: 'partials/forms.html',
-				controller: 'MainCtrl'
+				controller: 'MainCtrl',
+				activeTab: 'forms'
 			})
 			.when('/components', {
 				templateUrl: 'partials/components.html',
-				controller: 'MainCtrl'
+				controller: 'MainCtrl',
+				activeTab: 'components'
 			})
 			.when('/layouts', {
 				templateUrl: 'partials/layouts.html',
-				controller: 'MainCtrl'
+				controller: 'MainCtrl',
+				activeTab: 'layouts'
 			})
 			.otherwise({redirectTo: '/overview'})
 		;
@@ -41,7 +48,8 @@ angular.module('styleGuide', ['ngRoute'])
 		// 	});
 		// }
 	})
-	.controller('MainCtrl', function($scope) {
+	.controller('MainCtrl', function($scope, $route) {
+		$scope.$route = $route;
 		Prism.highlightAll();
 	})
 ;
