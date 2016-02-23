@@ -93,31 +93,32 @@ gulp.task('lint:css', function() {
 });
 
 // Lint scripts
-gulp.task('lint:js', function() {
+gulp.task('js', function() {
 	return gulp.src('./scripts/**/*.js')
 		.pipe($.jshint())
 		.pipe($.jshint.reporter('jshint-stylish'))
-	;
-});
-
-// Minify js
-gulp.task('uglify', function() {
-	return gulp.src('./scripts/app.js')
-		.pipe($.uglify())
-		.pipe(gulp.dest('./js'))
-	;
-});
-
-// Copy styleguide.js from scripts to js folder
-// because uglify cause error when minify angularjs code (not sure).
-gulp.task('copy:js', function() {
-	return gulp.src('./scripts/styleguide.js')
 		.pipe($.copy('./js', {prefix: 1}))
 	;
 });
 
+// Minify js
+// gulp.task('uglify', function() {
+// 	return gulp.src('./scripts/app.js')
+// 		.pipe($.uglify())
+// 		.pipe(gulp.dest('./js'))
+// 	;
+// });
+
+// Copy styleguide.js from scripts to js folder
+// because uglify cause error when minify angularjs code (not sure).
+// gulp.task('copy:js', function() {
+// 	return gulp.src('./scripts/styleguide.js')
+// 		.pipe($.copy('./js', {prefix: 1}))
+// 	;
+// });
+
 // Reload browser after lint:js complete
-gulp.task('js-watch', ['lint:js'], browserSync.reload);
+gulp.task('js-watch', ['js'], browserSync.reload);
 
 // Auto insert link or script tag
 gulp.task('bower', ['templates'], function() {
@@ -133,7 +134,7 @@ gulp.task('bower', ['templates'], function() {
 gulp.task('render', ['bower']);
 
 // Browser sync
-gulp.task('serve', ['css', 'templates', 'templates:partials', 'bower', 'lint:js', 'uglify', 'copy:js'], function() {
+gulp.task('serve', ['css', 'templates', 'templates:partials', 'bower', 'js'], function() {
 	browserSync.init({
 		server: './'
 	});
@@ -141,7 +142,7 @@ gulp.task('serve', ['css', 'templates', 'templates:partials', 'bower', 'lint:js'
 	gulp.watch('./views/index.jade', ['render']);
 	gulp.watch('./views/components/*.jade', ['templates:partials']);
 	gulp.watch('./styles/**/*.css', ['css']);
-	gulp.watch('./scripts/**/*.js', ['js-watch', 'uglify', 'copy:js']);
+	gulp.watch('./scripts/**/*.js', ['js']);
 	gulp.watch('./bower.json', ['bower']);
 	gulp.watch('./*.html').on('change', browserSync.reload);
 	gulp.watch('./partials/*.html').on('change', browserSync.reload);
