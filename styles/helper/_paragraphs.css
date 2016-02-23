@@ -5,3 +5,7 @@
 .smallprint {
   font-size: $h6-fz;
 }
+
+.text-muted {
+  color: $star-dust;
+}

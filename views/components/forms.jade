@@ -1,2 +1,17 @@
+-var css_base_dir = 'styles/base/'
 section.sg-section
 	h1.sg-section__title Forms
+	
+	//- FORM ELELMENTS
+	.sg-example
+		h3.sg-example__title
+			| <span>Form elements</span>#{css_base_dir}_forms.css<em>
+		.sg-example__descr
+			p
+				| Form elements in light background
+			
+		.sg-example__element
+			.form-control
+				label.sr-only Text Field
+				input(type="text" placeholder="Name").form-field
+	//- END FORM ELEMENTS

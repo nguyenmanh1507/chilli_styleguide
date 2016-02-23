@@ -68,7 +68,7 @@ section.sg-section
 
 	.sg-example
 		h3.sg-example__title
-			| <span>Intro</span> <em>#{css_helper_dir}_intro.css</em>
+			| <span>Intro</span> <em>#{css_helper_dir}_paragraphs.css</em>
 		.sg-example__descr
 			p
 				| Larger text size for the article introductory paragraph.
@@ -84,7 +84,7 @@ section.sg-section
 
 	.sg-example
 		h3.sg-example__title
-			| <span>Smallprint</span> <em>#{css_helper_dir}_smallprint.css</em>
+			| <span>Smallprint</span> <em>#{css_helper_dir}_paragraphs.css</em>
 		.sg-example__descr
 			p
 				| Smallprint
@@ -96,6 +96,19 @@ section.sg-section
 			pre
 				code.language-html
 					= "<p class\"smallprint\">15th July 1991</p>"
+					
+	.sg-example
+		h3.sg-example__title
+			| <span>Muted text</span> <em>#{css_helper_dir}_paragraphs.css</em>
+		.sg-example__descr
+
+		.sg-example__element
+			p.text-muted Welcome to Chilli restaurant
+
+		.sg-example__code-ex
+			pre
+				code.language-html
+					= "<p class\"text-muted\">Welcome to Chilli restaurant</p>"
 	//- END BODY COPY
 	
 	//- LINKS
