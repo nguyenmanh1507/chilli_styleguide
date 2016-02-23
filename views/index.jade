@@ -3,19 +3,32 @@ html(lang="en", ng-app="styleGuide")
 	//- HEAD
 	include ./head.jade
 
-	body(ng-controller="MainCtrl")
+	body(ng-controller="MainCtrl as main")
 
 		header.sg-header
 			.row
 				nav.sg-nav
 					ul
-						li: a(href="#/overview" ng-class="{active: $route.current.activeTab == 'overview'}") Overview
-						li: a(href="#/html" ng-class="{active: $route.current.activeTab == 'html'}") HTML
-						li: a(href="#/css" ng-class="{active: $route.current.activeTab == 'css'}") CSS
-						li: a(href="#/typography" ng-class="{active: $route.current.activeTab == 'typography'}") Typography
-						li: a(href="#/forms" ng-class="{active: $route.current.activeTab == 'forms'}") Forms
-						li: a(href="#/components" ng-class="{active: $route.current.activeTab == 'components'}") Components
-						li: a(href="#/layouts" ng-class="{active: $route.current.activeTab == 'layouts'}") Layouts
+						li(ng-class="{active:isActive('overview')}")
+							a(href="#/overview" ng-click="setTab('overview')") Overview
+							
+						li(ng-class="{active:isActive('html')}")
+							a(href="#/html" ng-click="setTab('html')") HTML
+							
+						li(ng-class="{active:isActive('css')}")
+							a(href="#/css" ng-click="setTab('css')") CSS
+							
+						li(ng-class="{active:isActive('typography')}")
+							a(href="#/typography" ng-click="setTab('typography')") Typography
+							
+						li(ng-class="{active:isActive('forms')}")
+							a(href="#/forms" ng-click="setTab('forms')") Forms
+							
+						li(ng-class="{active:isActive('components')}")
+							a(href="#/components" ng-click="setTab('components')") Components
+							
+						li(ng-class="{active:isActive('layouts')}")
+							a(href="#/layouts" ng-click="setTab('layouts')") Layouts
 						
 		.row
 			div(ng-view)

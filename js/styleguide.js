@@ -3,8 +3,7 @@ angular.module('styleGuide', ['ngRoute'])
 		$routeProvider
 			.when('/overview', {
 				templateUrl: 'partials/overview.html',
-				controller: 'MainCtrl',
-				activeTab: 'overview'
+				controller: 'MainCtrl'
 			})
 			.when('/css', {
 				templateUrl: 'partials/css.html',
@@ -46,8 +45,17 @@ angular.module('styleGuide', ['ngRoute'])
 		// 	});
 		// }
 	})
-	.controller('MainCtrl', function($scope, $route) {
-		$scope.$route = $route;
+	.controller('MainCtrl', function($scope) {
+		$scope.tab = 'overview';
+
+		$scope.isActive = function(url) {
+			return $scope.tab == url;
+		};
+
+		$scope.setTab = function(url) {
+			$scope.tab = url;
+		};
+
 		Prism.highlightAll();
 	})
 ;
