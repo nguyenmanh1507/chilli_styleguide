@@ -1,5 +1,3 @@
-'use strict';
-
 angular.module('styleGuide', ['ngRoute'])
 	.config(function ($routeProvider, $locationProvider) {
 		$routeProvider
@@ -53,3 +51,5 @@ angular.module('styleGuide', ['ngRoute'])
 		Prism.highlightAll();
 	})
 ;
+
+console.log('Hello from Angular 3');

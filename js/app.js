@@ -1,9 +1,1 @@
-var app = (function($) {
-	'use strict';
-
-
-})(jQuery);
-
-jQuery(document).ready(function($) {
-	console.log('Hello from js');
-});
+var app=function(o){"use strict"}(jQuery);jQuery(document).ready(function(o){console.log("Hello from js")});
