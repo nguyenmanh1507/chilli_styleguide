@@ -77,7 +77,7 @@ Use [Foundation Grid](http://foundation.zurb.com/) or [LostGrid](https://github.
 * [browser-sync](https://github.com/Browsersync/browser-sync): Keep multiple browsers & devices in sync when building websites.
 * [precss](https://github.com/jonathantneal/precss): Use Sass-like markup in your CSS.
 * [gulp-uglify](https://www.npmjs.com/package/gulp-uglify): Minify files with UglifyJS.
-* [gulp-copy](https://www.npmjs.com/package/gulp-copy): Plugin copying files to a new destination and using that destionation for other actions.
+* [gulp-copy](https://www.npmjs.com/package/gulp-copy): Plugin copying files to a new destination and using that destination for other actions.
 
 ## PostCSS plugins
 
@@ -97,4 +97,4 @@ Use [Foundation Grid](http://foundation.zurb.com/) or [LostGrid](https://github.
 
 ## Misc
 
-* CSS class for styleguide need prefix (ex: sg-something) to avoid conflict with components's class.
+* CSS class for styleguide need prefix (ex: .sg-something) to avoid conflict with components's class.
