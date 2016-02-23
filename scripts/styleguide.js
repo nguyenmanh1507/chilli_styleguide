@@ -51,5 +51,3 @@ angular.module('styleGuide', ['ngRoute'])
 		Prism.highlightAll();
 	})
 ;
-
-console.log('Hello from Angular 3');

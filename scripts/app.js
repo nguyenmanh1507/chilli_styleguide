@@ -5,5 +5,5 @@ var app = (function($) {
 })(jQuery);
 
 jQuery(document).ready(function($) {
-	console.log('Hello from js');
+	
 });
