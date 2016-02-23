@@ -112,7 +112,7 @@ gulp.task('uglify', function() {
 // because uglify cause error when minify angularjs code (not sure).
 gulp.task('copy:js', function() {
 	return gulp.src('./scripts/styleguide.js')
-		.pipe($.copy('./js'))
+		.pipe($.copy('./js', {prefix: 1}))
 	;
 });
 
